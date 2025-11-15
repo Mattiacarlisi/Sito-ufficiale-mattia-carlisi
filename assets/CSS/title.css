@@ -1,68 +1,80 @@
+/* ==== HERO GENERICA (stile comune) ==== */
 .hero-bg-header {
-    height: 100vh;
-    background: url("../img/GPT.png") center center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    color: white;
-  }
-  
-  .hero-bg-header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Oscuramento */
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 2rem;
-  }
-  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+/* Hero home / personal trainer */
+.hero-bg-header-main {
+  background: url("../img/GPT.png") center center / cover no-repeat;
+}
+
+/* Hero pagina anziani */
+.hero-bg-header-anziani {
+  background: url("../img/sfondo.png") center center / cover no-repeat;
+  /* cambia sfondo-anziani.png con il nome reale del file */
+}
+
+/* Oscuramento sopra l'immagine (vale per entrambe) */
+.hero-bg-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Contenuto testo hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  background-color: #335DFF;
+  color: white;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #2648cc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: 2rem;
   }
-  
+
   .hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
   }
-  
+
   .hero-btn {
-    background-color: #335DFF;
-    color: white;
-    padding: 0.9rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 999px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
   }
-  
-  .hero-btn:hover {
-    background-color: #2648cc;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-  
-    .hero-content p {
-      font-size: 1rem;
-    }
-  
-    .hero-btn {
-      font-size: 1rem;
-      padding: 0.8rem 1.6rem;
-    }
-  }
-  
+}

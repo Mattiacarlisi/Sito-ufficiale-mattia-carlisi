@@ -1,0 +1,101 @@
+.about-section {
+  padding: 80px 20px;
+  background-color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1 1 45%;
+}
+
+.about-image img {
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1 1 45%;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.about-text .subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.about-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.about-points li {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.cta-button {
+  padding: 14px 28px;
+  background-color: #335DFF;
+  color: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2543cc;
+}
+
+/* Responsive: imposta layout verticale con immagine ridimensionata */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-image, .about-text {
+    flex: 1 1 100%;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .about-image img {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+}

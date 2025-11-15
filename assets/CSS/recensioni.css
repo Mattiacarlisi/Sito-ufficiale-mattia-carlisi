@@ -1,0 +1,126 @@
+.reviews-section {
+    padding: 5rem 1.5rem;
+    background-color: #ffffff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .reviews-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 2.5rem;
+  }
+  
+  .reviews-wrapper-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Wrapper contenente tutte le card */
+  .reviews-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE/Edge */
+    padding-inline: 2rem;
+  }
+  
+  .reviews-wrapper::-webkit-scrollbar {
+    display: none;                  /* Chrome/Safari */
+  }
+  
+  /* Singola card */
+  .review-card {
+    flex: 0 0 320px;
+    background-color: #f8f8f8;
+    padding: 2rem;
+    border-radius: 20px;
+    scroll-snap-align: start;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    text-align: left;
+  }
+  
+  .review-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .review-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+  
+  .review-author {
+    font-weight: 600;
+    color: #335DFF;
+    font-size: 1rem;
+  }
+  
+  /* Frecce scroll visibili su desktop */
+  .scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(51, 93, 255, 0.9);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s ease;
+    opacity: 0.9;
+  }
+  
+  .scroll-arrow.left {
+    left: 16px;
+  }
+  
+  .scroll-arrow.right {
+    right: 16px;
+  }
+  
+  .scroll-arrow:hover {
+    background: #2648cc;
+    opacity: 1;
+  }
+  
+  /* Responsive: su mobile le frecce spariscono, le card si allargano */
+  @media (max-width: 768px) {
+    .scroll-arrow {
+      display: none;
+    }
+  
+    .review-card {
+      flex: 0 0 85%;
+    }
+  
+    .reviews-title {
+      font-size: 1.6rem;
+    }
+  
+    .review-text {
+      font-size: 1rem;
+    }
+  
+    .review-author {
+      font-size: 0.95rem;
+    }
+  }
+  

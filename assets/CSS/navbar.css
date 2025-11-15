@@ -1,0 +1,134 @@
+:root { 
+  --main-blue: #335DFF;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--main-blue);
+}
+
+.contact-button {
+  background-color: var(--main-blue);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #2648cc;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* 🔧 MENU MOBILE FIXATO E SEMPRE VISIBILE OVUNQUE */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  padding: 1rem 2rem;
+  border-top: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: fixed; /* FISSO nello schermo */
+  top: 80px;        /* altezza navbar + margine */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu a,
+.mobile-menu button {
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  text-align: left;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu button {
+  background-color: var(--main-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+}

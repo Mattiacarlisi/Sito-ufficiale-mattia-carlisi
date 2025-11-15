@@ -1,0 +1,31 @@
+.features-cta {
+    margin-top: 4rem;      /* più spazio sopra */
+    padding-bottom: 1rem;  /* anche un po' di spazio sotto */
+    text-align: center;
+  }
+  .cta-btn {
+    background-color: #335DFF;
+    color: white;
+    padding: 1.2rem 3rem;       /* più alto e più largo */
+    font-size: 2rem;         /* testo più grande */
+    font-weight: 700;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 50px auto 0 auto;   /* distacco + centratura verticale */
+  }
+  
+  
+  .cta-btn:hover {
+    background-color: #2648cc;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .cta-btn {
+      font-size: 1.5rem;
+      padding: 0.8rem 1.6rem;
+    }
+  }
+  

@@ -35,6 +35,8 @@
   z-index: 2;
   max-width: 800px;
   padding: 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .hero-content h1 {
@@ -48,7 +50,9 @@
   margin-bottom: 2rem;
 }
 
+/* Bottone "Prenota una consulenza" */
 .hero-btn {
+  display: inline-block;
   background-color: #335DFF;
   color: white;
   padding: 0.9rem 2rem;
@@ -57,13 +61,20 @@
   border-radius: 999px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+
+  /* sicurezza responsive */
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;      /* così il testo può andare a capo */
 }
 
 .hero-btn:hover {
   background-color: #2648cc;
 }
 
-/* Responsive */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
 
   /* Lasciamo che sia il contenuto a decidere l'altezza */
@@ -78,6 +89,10 @@
     background-position: center top;
   }
 
+  .hero-content {
+    padding: 1.5rem 1rem;  /* leggermente meno padding sui lati */
+  }
+
   .hero-content h1 {
     font-size: 2rem;
   }
@@ -89,6 +104,6 @@
   .hero-btn {
     font-size: 1rem;
     padding: 0.8rem 1.6rem;
+    margin: 0 auto;        /* si centra comunque */
   }
 }
-

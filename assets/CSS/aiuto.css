@@ -1,73 +1,108 @@
 .support-section {
-    background-color: rgba(249, 249, 249, 1);
-    padding: 6rem 2rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+  background-color: #ffffff;
+  padding: 6rem 2rem;
+}
+
+.support-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.support-content {
+  flex: 1 1 55%;
+}
+
+.support-image {
+  flex: 1 1 40%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+  position: relative;
+}
+
+.support-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.support-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+}
+
+.support-paragraph {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 1.2rem;
+}
+
+.support-highlight {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent, #FB8B04);
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.support-button {
+  display: inline-block;
+  background-color: var(--accent, #FB8B04);
+  color: white;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.support-button:hover {
+  background-color: var(--accent-hover, #e07c00);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .support-inner {
+    flex-direction: column;
+    gap: 2.5rem;
   }
-  
-  .support-section.full-width {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+
+  .support-content,
+  .support-image {
+    flex: 1 1 100%;
+    width: 100%;
   }
-  
-  .support-content {
-    max-width: 750px;
-    padding: 0 1rem;
+
+  .support-image img {
+    min-height: 280px;
   }
-  
+
   .support-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 2rem;
+    font-size: 1.65rem;
   }
-  
-  .support-paragraph {
-    font-size: 1.15rem;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .support-section {
+    padding: 4rem 1.2rem;
   }
-  
+
+  .support-title {
+    font-size: 1.45rem;
+  }
+
+  .support-paragraph,
   .support-highlight {
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: #335DFF;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
   }
-  
-  .support-button {
-    display: inline-block;
-    background-color: #335DFF;
-    color: white;
-    padding: 1rem 2.5rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    border-radius: 999px;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .support-button:hover {
-    background-color: #2648cc;
-    transform: translateY(-2px);
-  }
-  
-  @media (max-width: 768px) {
-    .support-title {
-      font-size: 1.6rem;
-    }
-    .support-paragraph,
-    .support-highlight {
-      font-size: 1rem;
-    }
-    .support-button {
-      font-size: 1rem;
-      padding: 0.9rem 2rem;
-    }
-  }
+}

@@ -1,8 +1,18 @@
 .map-section {
   padding: 80px 20px;
-  background-color: #f9f9f9;
+  background-color: var(--warm-bg, #F7F6F1);
   text-align: center;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.map-address {
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--text-medium, #445574);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .map-container {
@@ -43,5 +53,19 @@
 
   .map-frame iframe {
     height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .map-section {
+    padding: 50px 16px;
+  }
+
+  .map-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .map-frame iframe {
+    height: 240px;
   }
 }

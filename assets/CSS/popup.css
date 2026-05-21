@@ -15,7 +15,7 @@
   gap: 15px;
   align-items: center;
   z-index: 9999;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: var(--font-main, 'Inter', sans-serif);
 }
 
 .cookie-text {
@@ -25,7 +25,7 @@
 }
 
 .cookie-text a {
-  color: #335DFF;
+  color: var(--accent, #FB8B04);
   text-decoration: underline;
 }
 
@@ -47,12 +47,12 @@
 }
 
 .cookie-btn.accept {
-  background-color: #335DFF;
+  background-color: var(--accent, #FB8B04);
   color: white;
 }
 
 .cookie-btn.accept:hover {
-  background-color: #2543cc;
+  background-color: var(--accent-hover, #e07c00);
 }
 
 .cookie-btn.decline {

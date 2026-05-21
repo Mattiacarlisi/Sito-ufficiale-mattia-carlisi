@@ -1,7 +1,6 @@
 .about-section {
   padding: 80px 20px;
   background-color: #fff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .about-container {
@@ -19,10 +18,11 @@
 }
 
 .about-image img {
-  width: 50%;
+  width: 100%;
   height: auto;
   border-radius: 20px;
   object-fit: cover;
+  box-shadow: 0 8px 32px rgba(15, 29, 53, 0.12);
 }
 
 .about-text {
@@ -57,7 +57,7 @@
 
 .cta-button {
   padding: 14px 28px;
-  background-color: #335DFF;
+  background-color: var(--accent, #FB8B04);
   color: #fff;
   border-radius: 12px;
   text-decoration: none;
@@ -67,7 +67,7 @@
 }
 
 .cta-button:hover {
-  background-color: #2543cc;
+  background-color: var(--accent-hover, #e07c00);
 }
 
 /* Responsive: imposta layout verticale con immagine ridimensionata */

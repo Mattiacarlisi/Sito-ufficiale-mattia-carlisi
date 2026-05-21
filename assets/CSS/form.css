@@ -1,7 +1,7 @@
 .contact-section {
   padding: 80px 20px;
-  background-color: #ffffff; /* sfondo bianco */
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  font-family: var(--font-main, 'Inter', sans-serif);
 }
 
 .container {
@@ -36,7 +36,7 @@
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-  border-color: #335DFF;
+  border-color: var(--accent, #FB8B04);
   outline: none;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .btn-submit {
-  background-color: #335DFF;
+  background-color: var(--accent, #FB8B04);
   color: #fff;
   padding: 14px 28px;
   border: none;
@@ -57,11 +57,35 @@
 }
 
 .btn-submit:hover {
-  background-color: #2543cc;
+  background-color: var(--accent-hover, #e07c00);
 }
 
 #form-feedback {
   margin-top: 20px;
   text-align: center;
   font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 60px 16px;
+  }
+
+  .contact-title {
+    font-size: 1.65rem;
+    margin-bottom: 28px;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 14px;
+    font-size: 0.97rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
 }

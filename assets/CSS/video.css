@@ -1,0 +1,26 @@
+.video-section {
+  background-color: var(--dark, #1A1A1A);
+  padding: 4rem 2rem;
+}
+
+.video-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.video-wrapper video {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+  .video-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .video-wrapper video {
+    border-radius: 10px;
+  }
+}

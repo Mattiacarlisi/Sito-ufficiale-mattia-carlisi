@@ -1,5 +1,15 @@
-:root { 
-  --main-blue: #335DFF;
+:root {
+  --accent: #FB8B04;
+  --accent-hover: #e07c00;
+  --dark: #1A1A1A;
+  --warm-bg: #F5F4F1;
+  --text-dark: #1A1A1A;
+  --text-medium: #555555;
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  font-family: var(--font-main);
 }
 
 nav {
@@ -46,11 +56,11 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--main-blue);
+  color: var(--accent);
 }
 
 .contact-button {
-  background-color: var(--main-blue);
+  background-color: var(--accent);
   color: white;
   border: none;
   padding: 0.9rem 2rem;
@@ -62,7 +72,7 @@ nav {
 }
 
 .contact-button:hover {
-  background-color: #2648cc;
+  background-color: var(--accent-hover);
 }
 
 .menu-toggle {
@@ -82,7 +92,7 @@ nav {
   border-top: 1px solid #eee;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: fixed; /* FISSO nello schermo */
-  top: 80px;        /* altezza navbar + margine */
+  top: 92px;
   left: 0;
   width: 100%;
   z-index: 999;
@@ -106,7 +116,7 @@ nav {
 }
 
 .mobile-menu button {
-  background-color: var(--main-blue);
+  background-color: var(--accent);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 999px;

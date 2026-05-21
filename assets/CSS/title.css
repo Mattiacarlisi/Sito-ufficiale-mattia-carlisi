@@ -1,4 +1,133 @@
-/* ==== HERO GENERICA (stile comune) ==== */
+/* ===== HERO HOMEPAGE (split layout) ===== */
+.hero-section {
+  background-color: var(--dark, #1A1A1A);
+  padding: 5rem 2rem 4.5rem;
+  color: white;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1 1 55%;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(251, 139, 4, 0.12);
+  border: 1px solid rgba(251, 139, 4, 0.38);
+  color: var(--accent, #FB8B04);
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.4px;
+}
+
+.hero-section h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-section p {
+  font-size: 1.12rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: var(--accent, #FB8B04);
+  color: white;
+  padding: 1rem 2.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 1.6rem;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: var(--accent-hover, #e07c00);
+  transform: translateY(-2px);
+}
+
+.hero-trust {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-trust span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-trust i {
+  color: var(--accent, #FB8B04);
+  font-size: 0.78rem;
+}
+
+/* Colonna foto */
+.hero-image-col {
+  flex: 1 1 38%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.hero-photo-wrap::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--accent, #FB8B04);
+  border-radius: 24px;
+  z-index: 0;
+}
+
+.hero-photo-wrap img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* ===== HERO PAGINA ANZIANI (mantiene il vecchio stile) ===== */
 .hero-bg-header {
   height: 100vh;
   display: flex;
@@ -10,26 +139,18 @@
   box-sizing: border-box;
 }
 
-/* Hero home / personal trainer */
-.hero-bg-header-main {
-  background: url("../img/GPT.png") center center / cover no-repeat;
-}
-
-/* Hero pagina anziani */
 .hero-bg-header-anziani {
   background: url("../img/sfondo.png") center center / cover no-repeat;
 }
 
-/* Oscuramento sopra l'immagine (vale per entrambe) */
 .hero-bg-header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(160deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.58) 100%);
   z-index: 1;
 }
 
-/* Contenuto testo hero */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -50,60 +171,51 @@
   margin-bottom: 2rem;
 }
 
-/* Bottone "Prenota una consulenza" */
-.hero-btn {
-  display: inline-block;
-  background-color: #335DFF;
-  color: white;
-  padding: 0.9rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  border: none;
-  cursor: pointer;
+/* ===== RESPONSIVE HERO HOMEPAGE ===== */
+@media (max-width: 900px) {
+  .hero-section {
+    padding: 4rem 1.5rem 3.5rem;
+    min-height: auto;
+  }
 
-  /* sicurezza responsive */
-  max-width: 100%;
-  box-sizing: border-box;
-  white-space: normal;      /* così il testo può andare a capo */
+  .hero-inner {
+    flex-direction: column-reverse;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-section p {
+    max-width: 100%;
+  }
+
+  .hero-trust {
+    justify-content: center;
+  }
+
+  .hero-photo-wrap {
+    max-width: 260px;
+  }
 }
 
-.hero-btn:hover {
-  background-color: #2648cc;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-
-  /* Lasciamo che sia il contenuto a decidere l'altezza */
-  .hero-bg-header {
-    height: auto;
-    padding: 5rem 1.5rem 3rem; /* spazio sopra/sotto per respirare */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 3.5rem 1.2rem 3rem;
   }
 
-  /* Sposto un po' il focus verso l'alto, così non taglia troppo i volti */
-  .hero-bg-header-main,
-  .hero-bg-header-anziani {
-    background-position: center top;
+  .hero-trust {
+    gap: 0.7rem;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .hero-content {
-    padding: 1.5rem 1rem;  /* leggermente meno padding sui lati */
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .hero-btn {
-    font-size: 1rem;
-    padding: 0.8rem 1.6rem;
-    margin: 0 auto;        /* si centra comunque */
+  .hero-section h1 {
+    font-size: 2.1rem;
   }
 }

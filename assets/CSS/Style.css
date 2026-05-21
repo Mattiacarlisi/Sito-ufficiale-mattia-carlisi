@@ -1,5 +1,7 @@
 @import url("navbar.css");
 @import url("title.css");
+@import url("stats.css");
+@import url("video.css");
 @import url("sceglimi.css");
 @import url("button.css");
 @import url("recensioni.css");
@@ -7,6 +9,8 @@
 @import url("servizi.css");
 @import url("chisono.css");
 @import url("luogo.css");
+@import url("instagram.css");
 @import url("footrer.css");
+@import url("faq.css");
 @import url("form.css");
 @import url("popup.css");

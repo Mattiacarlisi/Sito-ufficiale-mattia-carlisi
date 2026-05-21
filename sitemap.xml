@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://mattiacarlisi.com/</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mattiacarlisi.com/"/>
+  </url>
+
+  <!-- Attività fisica adattata per anziani -->
+  <url>
+    <loc>https://mattiacarlisi.com/anziani.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mattiacarlisi.com/anziani.html"/>
+  </url>
+
+  <!-- Personal trainer Torino -->
+  <url>
+    <loc>https://mattiacarlisi.com/personal-trainer-torino.html</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://mattiacarlisi.com/personal-trainer-torino.html"/>
+  </url>
+
+</urlset>

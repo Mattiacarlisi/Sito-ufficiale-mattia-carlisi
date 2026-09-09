@@ -265,3 +265,90 @@
   .hero-ctas { flex-direction: column; width: 100%; }
   .hero-ctas .hero-btn { width: 100%; text-align: center; justify-content: center; }
 }
+
+/* ===== HERO MOBILE: layout "scheda" ===== */
+.hero-avatar { display: none; }
+.hero-lead--mobile { display: none; }
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 2.2rem 1.2rem 2.4rem;
+  }
+
+  .hero-inner { gap: 0; }
+
+  /* Foto grande nascosta, avatar tondo al suo posto */
+  .hero-image-col { display: none; }
+
+  .hero-avatar {
+    display: block;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    border: 3px solid var(--accent, #FB8B04);
+    margin: 0 auto 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  .hero-badge {
+    font-size: 0.74rem;
+    padding: 0.4rem 0.95rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.85rem;
+    line-height: 1.18;
+    margin-bottom: 0.9rem;
+  }
+
+  /* Testo breve su mobile, quello completo resta su desktop */
+  .hero-lead--desktop { display: none; }
+  .hero-lead--mobile {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-ctas { gap: 10px; margin-bottom: 1.1rem; }
+  .hero-ctas .hero-btn { padding: 0.9rem 1.4rem; font-size: 1rem; }
+
+  .hero-trust {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem 1rem;
+  }
+
+  .hero-trust span { font-size: 0.78rem; }
+}
+
+/* Mobile: niente righe forzate nel titolo, blocchi sempre entro la larghezza dello schermo */
+@media (max-width: 600px) {
+  .hero-text,
+  .hero-ctas,
+  .hero-trust {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-section h1 {
+    font-size: 1.7rem;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-section h1 br { display: none; }
+
+  .hero-ctas { flex-direction: column; }
+
+  .hero-ctas .hero-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.95rem 1rem;
+    font-size: 0.98rem;
+  }
+}

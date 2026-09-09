@@ -117,3 +117,94 @@
   opacity: 0.7;
   cursor: wait;
 }
+
+/* ===== Contatto diretto: chiama / WhatsApp ===== */
+.contact-direct {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.contact-direct__lead {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+.contact-direct__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contact-direct__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.9rem;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.contact-direct__btn:hover { transform: translateY(-2px); }
+.contact-direct__btn--call { background-color: var(--accent, #FB8B04); }
+.contact-direct__btn--call:hover { background-color: var(--accent-hover, #e07c00); }
+.contact-direct__btn--wa { background-color: #25D366; }
+.contact-direct__btn--wa:hover { background-color: #1ebe5b; }
+
+.contact-direct__or {
+  margin-top: 26px;
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.form-privacy {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.form-privacy a { color: var(--accent, #FB8B04); }
+
+/* ===== Barra contatti rapidi fissa (solo mobile) ===== */
+.contact-bar {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1500;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  gap: 10px;
+}
+
+.contact-bar__btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 0.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-bar__btn--call { background-color: var(--accent, #FB8B04); }
+.contact-bar__btn--wa { background-color: #25D366; }
+
+@media (max-width: 768px) {
+  .contact-bar { display: flex; }
+  body { padding-bottom: 76px; }
+  .cookie-popup { bottom: 90px; }
+  .contact-direct__btn { width: 100%; justify-content: center; }
+}

@@ -85,3 +85,15 @@ nav.footer-nav {
   padding: 0;
   z-index: auto;
 }
+
+.footer-address {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.footer-address a {
+  color: var(--accent, #FB8B04);
+  text-decoration: none;
+  font-weight: 600;
+}

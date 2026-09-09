@@ -230,3 +230,32 @@
 .hero-section p a:hover {
   color: var(--accent, #FB8B04);
 }
+
+/* Doppia CTA nella hero: consulenza + WhatsApp */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+
+.hero-ctas .hero-btn { margin-bottom: 0; }
+
+.hero-btn--wa {
+  background-color: #25D366;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-btn--wa:hover { background-color: #1ebe5b; }
+
+@media (max-width: 900px) {
+  .hero-ctas { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-ctas { flex-direction: column; width: 100%; }
+  .hero-ctas .hero-btn { width: 100%; text-align: center; justify-content: center; }
+}

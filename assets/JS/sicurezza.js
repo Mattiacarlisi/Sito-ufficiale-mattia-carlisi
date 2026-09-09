@@ -81,3 +81,14 @@
     if (mapBtn) mapBtn.addEventListener("click", loadMap);
   });
 })();
+
+// Tracciamento clic su "Chiama" e "WhatsApp" (inviato a GA4 solo se attivo e con consenso)
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-track]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "contact_click", { method: el.getAttribute("data-track"), page: location.pathname });
+      }
+    });
+  });
+});

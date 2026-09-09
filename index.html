@@ -92,8 +92,9 @@
         "MedicalBusiness"
       ],
       "@id": "https://mattiacarlisi.com/#business",
-      "name": "Dott. Mattia Carlisi — Chinesiologo Torino",
+      "name": "Dott. Mattia Carlisi Chinesiologo - Personal Trainer",
       "alternateName": [
+        "Dott. Mattia Carlisi — Chinesiologo Torino",
         "Mattia Carlisi Chinesiologo",
         "Studio Dott. Mattia Carlisi"
       ],
@@ -109,9 +110,10 @@
       "paymentAccepted": "Contanti, Bonifico bancario",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Via Pietro Piffetti 20",
         "addressLocality": "Torino",
-        "addressRegion": "Piemonte",
-        "postalCode": "10100",
+        "addressRegion": "TO",
+        "postalCode": "10143",
         "addressCountry": "IT"
       },
       "geo": {
@@ -119,7 +121,7 @@
         "latitude": 45.0773506,
         "longitude": 7.6592091
       },
-      "hasMap": "https://www.google.com/maps/place/Dott.+Mattia+Carlisi+Chinesiologo",
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Dott.+Mattia+Carlisi+Chinesiologo+-+Personal+Trainer+Via+Pietro+Piffetti+20+Torino",
       "areaServed": [
         {
           "@type": "City",
@@ -236,6 +238,17 @@
         "https://www.instagram.com/mattiacarlisi.pt/",
         "https://it-it.facebook.com/mattia.carlisi/",
         "https://it.linkedin.com/in/mattia-carlisi-095036239"
+      ],
+      "telephone": "+39 342 137 1220",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+39 342 137 1220",
+          "contactType": "customer service",
+          "availableLanguage": "it",
+          "areaServed": "IT",
+          "url": "https://wa.me/393421371220"
+        }
       ]
     },
     {
@@ -278,7 +291,8 @@
         "https://www.instagram.com/mattiacarlisi.pt/",
         "https://it-it.facebook.com/mattia.carlisi/",
         "https://it.linkedin.com/in/mattia-carlisi-095036239"
-      ]
+      ],
+      "telephone": "+39 342 137 1220"
     },
     {
       "@type": "WebSite",
@@ -416,7 +430,10 @@
       </div>
       <h1>Basta convivere<br>con dolori e rigidità.</h1>
       <p>Sono Mattia Carlisi, Chinesiologo clinico a Torino. A differenza di un personal trainer, sono un professionista del movimento specializzato: valuto il tuo corpo, individuo le cause dei tuoi problemi e costruisco un programma 100% su misura — con basi scientifiche, non esercizi a caso.</p>
-      <a href="#contatti" class="hero-btn">Prenota la prima consulenza gratuita &rarr;</a>
+      <div class="hero-ctas">
+        <a href="#contatti" class="hero-btn">Prenota la prima consulenza gratuita &rarr;</a>
+        <a href="https://wa.me/393421371220?text=Buongiorno%20Mattia%2C%20vorrei%20informazioni%20su%20un%20percorso%20con%20un%20chinesiologo%20a%20Torino." class="hero-btn hero-btn--wa" target="_blank" rel="noopener noreferrer" data-track="whatsapp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Scrivimi su WhatsApp</a>
+      </div>
       <div class="hero-trust">
         <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Consulenza telefonica gratuita</span>
         <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Nessun obbligo</span>
@@ -724,16 +741,16 @@
 <section class="map-section" id="mappa">
   <div class="map-container">
     <h2>Visita il mio studio a Torino</h2>
-    <p class="map-subtitle">Ricevo su appuntamento per valutazioni personalizzate nel mio studio a Torino.</p>
+    <p class="map-subtitle">Ricevo su appuntamento nel mio studio in zona Cit Turin / San Donato, a Torino. Sedute a domicilio in tutta la città e coaching online.</p>
     <address class="map-address">
-      <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Torino (TO), Piemonte — ricevo in studio, a domicilio e online
+      <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Via Pietro Piffetti 20, 10143 Torino (TO) — ricevo in studio, a domicilio e online
     </address>
     <div class="map-frame" id="map-frame" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2817.41629618427!2d7.659209075737549!3d45.07735065916754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47886deef0e56f17%3A0xf0bb463f94dc0d5c!2sDott.%20Mattia%20Carlisi%20Chinesiologo%20-%20Personal%20Trainer!5e0!3m2!1sit!2sit!4v1732459345245!5m2!1sit!2sit">
       <div class="map-placeholder">
         <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i>
         <p>La mappa di Google viene caricata solo con il tuo consenso ai cookie di terze parti.</p>
         <button type="button" class="map-load-btn" id="map-load-btn">Mostra la mappa</button>
-        <a class="map-external" href="https://www.google.com/maps/search/?api=1&amp;query=Dott.+Mattia+Carlisi+Chinesiologo+Torino" target="_blank" rel="noopener noreferrer">Apri in Google Maps</a>
+        <a class="map-external" href="https://www.google.com/maps/search/?api=1&amp;query=Dott.+Mattia+Carlisi+Chinesiologo+-+Personal+Trainer+Via+Pietro+Piffetti+20+Torino" target="_blank" rel="noopener noreferrer">Apri in Google Maps</a>
       </div>
     </div>
   </div>
@@ -815,43 +832,32 @@
 <section class="contact-section" id="contatti">
   <div class="container">
     <h2 class="contact-title">Contattami</h2>
+    <div class="contact-direct">
+      <p class="contact-direct__lead">Il modo più veloce: chiamami o scrivimi su WhatsApp. Rispondo entro 24 ore.</p>
+      <div class="contact-direct__buttons">
+        <a href="tel:+393421371220" class="contact-direct__btn contact-direct__btn--call" data-track="call"><i class="fa-solid fa-phone" aria-hidden="true"></i> 342 137 1220</a>
+        <a href="https://wa.me/393421371220?text=Buongiorno%20Mattia%2C%20vorrei%20informazioni%20su%20un%20percorso%20con%20un%20chinesiologo%20a%20Torino." class="contact-direct__btn contact-direct__btn--wa" target="_blank" rel="noopener noreferrer" data-track="whatsapp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+      </div>
+      <p class="contact-direct__or">Oppure lascia il tuo numero e ti richiamo io:</p>
+    </div>
+
     <form id="contact-form" class="contact-form" novalidate>
       <!-- Honeypot anti-spam: resta vuoto per gli utenti reali -->
       <div class="hp-field" aria-hidden="true"><label for="website">Sito web</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
       <div class="form-group">
         <label for="firstName" class="sr-only">Nome</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Nome" autocomplete="given-name" required>
-      </div>
-      <div class="form-group">
-        <label for="lastName" class="sr-only">Cognome</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Cognome" autocomplete="family-name" required>
-      </div>
-      <div class="form-group">
-        <label for="email" class="sr-only">Email</label>
-        <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+        <input type="text" id="firstName" name="firstName" placeholder="Il tuo nome" autocomplete="name" required>
       </div>
       <div class="form-group">
         <label for="phone" class="sr-only">Numero di telefono</label>
         <input type="tel" id="phone" name="phone" placeholder="Numero di telefono" autocomplete="tel" required>
       </div>
       <div class="form-group">
-        <label for="service" class="sr-only">Servizio di interesse</label>
-        <select id="service" name="service" required>
-          <option value="" disabled selected>A che servizio sei interessato?</option>
-          <option value="Valutazione posturale e funzionale">Valutazione posturale e funzionale</option>
-          <option value="Allenamento personalizzato in studio">Allenamento personalizzato in studio</option>
-          <option value="Rieducazione motoria">Rieducazione motoria</option>
-          <option value="Attività fisica adattata anziani">Attività fisica adattata (anziani)</option>
-          <option value="Coaching online">Coaching online</option>
-          <option value="Lezione di coppia">Lezione di coppia</option>
-          <option value="Informazioni generali">Informazioni generali</option>
-        </select>
-      </div>
-      <div class="form-group">
         <label for="message" class="sr-only">Messaggio</label>
-        <textarea id="message" name="message" rows="5" placeholder="Scrivimi un messaggio..." required></textarea>
+        <textarea id="message" name="message" rows="4" placeholder="Raccontami in due righe la tua situazione (dolori, obiettivi, per chi è il percorso)…" required></textarea>
       </div>
-      <button type="submit" class="btn-submit">Invia messaggio</button>
+      <button type="submit" class="btn-submit">Richiedi di essere richiamato</button>
+      <p class="form-privacy">Nessun impegno. I dati servono solo per richiamarti (<a href="/privacy.html">privacy</a>).</p>
     </form>
     <div id="form-feedback" role="status" aria-live="polite"></div>
   </div>
@@ -887,9 +893,16 @@
       </a>
     </div>
 
-    <p class="footer-copy">© 2026 Dott. Mattia Carlisi — Chinesiologo, Torino. Tutti i diritti riservati.</p>
+    <p class="footer-address">Tel. / WhatsApp: <a href="tel:+393421371220" data-track="call">342 137 1220</a> · Studio: Via Pietro Piffetti 20, 10143 Torino (TO) · Sedute a domicilio in tutta Torino · Coaching online</p>
+    <p class="footer-copy">© 2026 Dott. Mattia Carlisi Chinesiologo - Personal Trainer, Torino. Tutti i diritti riservati.</p>
   </div>
 </footer>
+
+<!-- Barra contatti rapidi (solo mobile) -->
+<div class="contact-bar" role="navigation" aria-label="Contatti rapidi">
+  <a href="tel:+393421371220" class="contact-bar__btn contact-bar__btn--call" data-track="call"><i class="fa-solid fa-phone" aria-hidden="true"></i> Chiama</a>
+  <a href="https://wa.me/393421371220?text=Buongiorno%20Mattia%2C%20vorrei%20informazioni%20su%20un%20percorso%20con%20un%20chinesiologo%20a%20Torino." class="contact-bar__btn contact-bar__btn--wa" target="_blank" rel="noopener noreferrer" data-track="whatsapp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+</div>
 
 <!-- Cookie Popup -->
 <div id="cookie-popup" class="cookie-popup" role="dialog" aria-label="Preferenze cookie" hidden>

@@ -11,12 +11,12 @@
 /assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
-# CSS e JS: cache di un giorno, aggiornamento in background
+# CSS e JS: cache breve (10 min) con rivalidazione, così le modifiche arrivano subito a tutti
 /assets/CSS/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Cache-Control: public, max-age=600, must-revalidate
 
 /assets/JS/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Cache-Control: public, max-age=600, must-revalidate
 
 /favicon.ico
   Cache-Control: public, max-age=604800

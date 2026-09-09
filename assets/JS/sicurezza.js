@@ -4,7 +4,7 @@
 // nella costante GA_MEASUREMENT_ID. Finché resta vuoto non viene caricato nulla.
 // La mappa di Google Maps viene caricata solo dopo il consenso (o cliccando "Mostra la mappa").
 (function () {
-  var GA_MEASUREMENT_ID = "";
+  var GA_MEASUREMENT_ID = "G-M79S23EB3E";
   var STORAGE_KEY = "cookieConsent";
 
   function getConsent() {

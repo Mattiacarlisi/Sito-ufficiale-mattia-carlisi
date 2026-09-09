@@ -1,39 +1,83 @@
+// Consenso cookie + caricamento condizionato dei servizi di terze parti.
+//
+// Google Analytics 4: per attivarlo inserisci l'ID di misurazione (es. "G-ABC123XYZ")
+// nella costante GA_MEASUREMENT_ID. Finché resta vuoto non viene caricato nulla.
+// La mappa di Google Maps viene caricata solo dopo il consenso (o cliccando "Mostra la mappa").
+(function () {
+  var GA_MEASUREMENT_ID = "";
+  var STORAGE_KEY = "cookieConsent";
 
-  window.addEventListener("DOMContentLoaded", () => {
-    const popup = document.getElementById("cookie-popup");
-    const acceptBtn = document.getElementById("accept-cookies");
-    const declineBtn = document.getElementById("decline-cookies");
+  function getConsent() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
 
-    const consent = localStorage.getItem("cookieConsent");
+  function setConsent(value) {
+    try { localStorage.setItem(STORAGE_KEY, value); } catch (e) { /* storage non disponibile */ }
+  }
 
+  function loadAnalytics() {
+    if (!GA_MEASUREMENT_ID || window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    var script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_MEASUREMENT_ID;
+    script.async = true;
+    document.head.appendChild(script);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
+  }
+
+  function loadMap() {
+    var frame = document.getElementById("map-frame");
+    if (!frame || frame.dataset.loaded) return;
+    var src = frame.getAttribute("data-map-src");
+    if (!src) return;
+    frame.dataset.loaded = "1";
+    var iframe = document.createElement("iframe");
+    iframe.src = src;
+    iframe.title = "Mappa dello studio del Dott. Mattia Carlisi, chinesiologo a Torino";
+    iframe.loading = "lazy";
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = "no-referrer-when-downgrade";
+    frame.innerHTML = "";
+    frame.appendChild(iframe);
+  }
+
+  function loadThirdParty() {
+    loadAnalytics();
+    loadMap();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var popup = document.getElementById("cookie-popup");
+    var acceptBtn = document.getElementById("accept-cookies");
+    var declineBtn = document.getElementById("decline-cookies");
+    var mapBtn = document.getElementById("map-load-btn");
+
+    var consent = getConsent();
     if (!consent) {
-      popup.style.display = "flex";
+      if (popup) popup.hidden = false;
     } else if (consent === "accepted") {
-      loadCookies();
+      loadThirdParty();
     }
 
-    acceptBtn.addEventListener("click", () => {
-      localStorage.setItem("cookieConsent", "accepted");
-      popup.style.display = "none";
-      loadCookies();
-    });
-
-    declineBtn.addEventListener("click", () => {
-      localStorage.setItem("cookieConsent", "declined");
-      popup.style.display = "none";
-    });
-
-    function loadCookies() {
-      // Esempio: GA4
-      const script = document.createElement("script");
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-      script.async = true;
-      document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+    if (acceptBtn) {
+      acceptBtn.addEventListener("click", function () {
+        setConsent("accepted");
+        if (popup) popup.hidden = true;
+        loadThirdParty();
+      });
     }
+
+    if (declineBtn) {
+      declineBtn.addEventListener("click", function () {
+        setConsent("declined");
+        if (popup) popup.hidden = true;
+      });
+    }
+
+    // Consenso esplicito per la sola mappa (clic dell'utente)
+    if (mapBtn) mapBtn.addEventListener("click", loadMap);
   });
-
+})();

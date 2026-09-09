@@ -1,33 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menu = document.getElementById("mobileMenu");
-  const toggleBtn = document.getElementById("menu-toggle");
+// Menu mobile: apertura/chiusura con stato accessibile (aria-expanded).
+document.addEventListener("DOMContentLoaded", function () {
+  var menu = document.getElementById("mobileMenu");
+  var toggleBtn = document.getElementById("menu-toggle");
+  if (!menu || !toggleBtn) return;
 
-  function toggleMobileMenu() {
-    menu.classList.toggle("active");
-
-    // Scrolla in cima se il menu viene aperto
-    if (menu.classList.contains("active")) {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+  function setOpen(open) {
+    menu.classList.toggle("active", open);
+    toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (open) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 
-  // Toggle apertura/chiusura al click sul bottone ☰
-  toggleBtn.addEventListener("click", toggleMobileMenu);
-
-  // Chiudi il menu quando si clicca un link o bottone dentro il menu
-  menu.querySelectorAll("a, button").forEach(el => {
-    el.addEventListener("click", () => {
-      menu.classList.remove("active");
-    });
+  toggleBtn.addEventListener("click", function () {
+    setOpen(!menu.classList.contains("active"));
   });
 
-  // Chiudi il menu se la finestra viene allargata oltre i 768px
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-      menu.classList.remove("active");
-    }
+  // Chiude il menu quando si sceglie una voce
+  menu.querySelectorAll("a, button").forEach(function (el) {
+    el.addEventListener("click", function () { setOpen(false); });
+  });
+
+  // Chiude il menu se la finestra torna al layout desktop
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768 && menu.classList.contains("active")) setOpen(false);
   });
 });

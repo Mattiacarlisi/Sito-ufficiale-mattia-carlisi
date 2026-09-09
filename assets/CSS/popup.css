@@ -63,3 +63,8 @@
 .cookie-btn.decline:hover {
   background-color: #ddd;
 }
+
+/* Il banner resta nascosto finché il JS non verifica il consenso */
+.cookie-popup[hidden] {
+  display: none;
+}

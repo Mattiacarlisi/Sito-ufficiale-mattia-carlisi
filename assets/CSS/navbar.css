@@ -142,3 +142,12 @@ nav {
     font-size: 1rem;
   }
 }
+
+/* Logo + brand cliccabili (link alla home) */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}

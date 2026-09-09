@@ -158,3 +158,19 @@ html, body {
     padding: 1.8rem 1.4rem;
   }
 }
+
+/* Card a tutta larghezza (quando il numero di card è dispari) */
+.servizio-card--wide {
+  grid-column: 1 / -1;
+}
+
+/* Link interni dentro le card */
+.servizio-per-chi a {
+  color: var(--accent, #FB8B04);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.servizio-per-chi a:hover {
+  text-decoration: underline;
+}

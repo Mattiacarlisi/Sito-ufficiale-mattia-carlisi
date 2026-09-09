@@ -1,32 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- Homepage -->
+  <!-- Home: Chinesiologo a Torino -->
   <url>
     <loc>https://mattiacarlisi.com/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://mattiacarlisi.com/"/>
+    <image:image>
+      <image:loc>https://mattiacarlisi.com/assets/img/mattia-carlisi-chinesiologo-torino-1000.webp</image:loc>
+      <image:title>Dott. Mattia Carlisi, chinesiologo clinico a Torino</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mattiacarlisi.com/assets/img/allenamento-clienti-chinesiologo-torino-900.webp</image:loc>
+      <image:title>Clienti in allenamento con il Dott. Mattia Carlisi a Torino</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mattiacarlisi.com/assets/img/og-image.jpg</image:loc>
+      <image:title>Dott. Mattia Carlisi — Chinesiologo Torino</image:title>
+    </image:image>
   </url>
 
-  <!-- Attività fisica adattata per anziani -->
+  <!-- Attività fisica adattata per anziani a domicilio -->
   <url>
     <loc>https://mattiacarlisi.com/anziani.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://mattiacarlisi.com/anziani.html"/>
+    <image:image>
+      <image:loc>https://mattiacarlisi.com/assets/img/attivita-fisica-adattata-anziana-torino-900.webp</image:loc>
+      <image:title>Attività fisica adattata per anziani a domicilio a Torino</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mattiacarlisi.com/assets/img/ginnastica-dolce-domicilio-anziani-torino-600.webp</image:loc>
+      <image:title>Ginnastica dolce per anziani a domicilio a Torino</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mattiacarlisi.com/assets/img/esercizi-equilibrio-mobilita-anziani-600.webp</image:loc>
+      <image:title>Esercizi di equilibrio e mobilità per anziani</image:title>
+    </image:image>
   </url>
 
-  <!-- Personal trainer Torino -->
+  <!-- Personal trainer a Torino -->
   <url>
     <loc>https://mattiacarlisi.com/personal-trainer-torino.html</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-09-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://mattiacarlisi.com/personal-trainer-torino.html"/>
+    <image:image>
+      <image:loc>https://mattiacarlisi.com/assets/img/allenamento-clienti-chinesiologo-torino-900.webp</image:loc>
+      <image:title>Allenamento personalizzato con personal trainer a Torino</image:title>
+    </image:image>
   </url>
 
 </urlset>

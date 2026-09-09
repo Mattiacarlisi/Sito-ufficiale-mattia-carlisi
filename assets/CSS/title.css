@@ -219,3 +219,14 @@
     font-size: 2.1rem;
   }
 }
+
+/* Link interni nel paragrafo hero */
+.hero-section p a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-section p a:hover {
+  color: var(--accent, #FB8B04);
+}

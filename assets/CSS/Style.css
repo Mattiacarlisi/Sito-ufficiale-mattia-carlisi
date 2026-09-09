@@ -1,3 +1,7 @@
+/* NOTA (2026-09): questo file NON è più caricato dalle pagine HTML.
+   Per performance i moduli CSS sono linkati direttamente nell'<head> di ogni pagina
+   (index.html, anziani.html, personal-trainer-torino.html, privacy.html, 404.html).
+   Se aggiungi un nuovo modulo CSS, aggiungi il <link> in tutte le pagine. */
 @import url("navbar.css");
 @import url("title.css");
 @import url("stats.css");

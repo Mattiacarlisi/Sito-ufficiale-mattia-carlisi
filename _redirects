@@ -1,0 +1,9 @@
+# Redirect per Netlify (https://docs.netlify.com/routing/redirects/)
+# Un solo URL canonico per pagina: evita contenuti duplicati.
+
+/index.html                 /                                301!
+/anziani                    /anziani.html                    301
+/anziani/                   /anziani.html                    301
+/personal-trainer-torino    /personal-trainer-torino.html    301
+/personal-trainer-torino/   /personal-trainer-torino.html    301
+/privacy                    /privacy.html                    301

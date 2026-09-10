@@ -208,3 +208,19 @@
   .cookie-popup { bottom: 90px; }
   .contact-direct__btn { width: 100%; justify-content: center; }
 }
+
+/* La barra fissa compare solo quando le CTA della hero non sono più a schermo */
+.contact-bar {
+  transition: transform 0.28s ease, visibility 0.28s ease;
+}
+
+.contact-bar.is-hidden {
+  transform: translateY(130%);
+  visibility: hidden;
+}
+
+@media (max-width: 768px) {
+  /* Il banner cookie si alza solo se la barra è effettivamente visibile */
+  .cookie-popup { bottom: 20px; }
+  body.contact-bar-visible .cookie-popup { bottom: 90px; }
+}
